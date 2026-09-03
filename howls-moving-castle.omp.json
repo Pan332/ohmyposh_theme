@@ -2,21 +2,19 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "version": 3,
   "final_space": true,
-  "console_title_template": "{{ .Shell }} ✦ {{ .Folder }}",
+  "console_title_template": "{{ .Shell }} in {{ .Folder }}",
   "palette": {
     "calcifer": "#FF8C42",
     "ember": "#E76F51",
     "flame_yellow": "#FFD97D",
-    "castle_rust": "#A0522D",
     "castle_teal": "#2A9D8F",
     "deep_teal": "#1F6F63",
     "sky": "#7EC8E3",
     "meadow": "#90BE6D",
     "twilight": "#6D597A",
-    "sophie_silver": "#D9D4CE",
     "cream": "#FDF6E3",
     "ink": "#2B2118",
-    "night": "#2E2A3B"
+    "sophie_silver": "#D9D4CE"
   },
   "blocks": [
     {
@@ -26,33 +24,33 @@
         {
           "type": "os",
           "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "foreground": "p:ink",
           "background": "p:flame_yellow",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}} "
+          "template": " {{ if .WSL }}WSL at {{ end }}{{ .Icon }} "
         },
         {
           "type": "path",
           "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "foreground": "p:cream",
           "background": "p:castle_teal",
           "properties": {
             "style": "agnoster_short",
             "max_depth": 3,
-            "folder_icon": "",
-            "home_icon": "",
+            "folder_icon": "",
+            "home_icon": "",
             "folder_separator_icon": "   "
           },
-          "template": "  {{ .Path }} "
+          "template": "  {{ .Path }} "
         },
         {
           "type": "git",
           "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "foreground": "p:ink",
           "background": "p:meadow",
           "background_templates": [
@@ -64,9 +62,9 @@
           "properties": {
             "fetch_status": true,
             "fetch_upstream_icon": true,
-            "branch_icon": " "
+            "branch_icon": " "
           },
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }} "
         }
       ]
     },
@@ -77,41 +75,39 @@
         {
           "type": "node",
           "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "foreground": "p:cream",
           "background": "p:deep_teal",
-          "template": "  {{ .Full }} "
+          "template": "  {{ .Full }} "
         },
         {
           "type": "python",
           "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "foreground": "p:ink",
           "background": "p:flame_yellow",
-          "template": "  {{ .Full }} "
+          "template": "  {{ .Full }} "
         },
         {
           "type": "go",
           "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "foreground": "p:ink",
           "background": "p:sky",
-          "template": "  {{ .Full }} "
+          "template": "  {{ .Full }} "
         },
         {
           "type": "time",
           "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "",
+          "leading_diamond": "",
+          "trailing_diamond": "",
           "foreground": "p:cream",
           "background": "p:twilight",
-          "properties": {
-            "time_format": "15:04"
-          },
-          "template": "  {{ .CurrentDate | date .Format }} "
+          "properties": { "time_format": "15:04" },
+          "template": "  {{ .CurrentDate | date .Format }} "
         }
       ]
     },
@@ -124,12 +120,8 @@
           "type": "status",
           "style": "plain",
           "foreground": "p:calcifer",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}p:ember{{ end }}"
-          ],
-          "properties": {
-            "always_enabled": true
-          },
+          "foreground_templates": [ "{{ if gt .Code 0 }}p:ember{{ end }}" ],
+          "properties": { "always_enabled": true },
           "template": "{{ if gt .Code 0 }} {{ .Code }} {{ end }}🏰 > "
         }
       ]
@@ -138,26 +130,23 @@
   "transient_prompt": {
     "foreground": "p:calcifer",
     "background": "transparent",
-    "template": " 🏰 > "
+    "template": "🏰 > "
   },
   "secondary_prompt": {
     "foreground": "p:sophie_silver",
     "background": "transparent",
-    "template": " 🏰 > "
+    "template": "🏰 > "
   },
   "tooltips": [
     {
       "type": "git",
       "tips": ["git", "g"],
       "style": "diamond",
-      "leading_diamond": "",
-      "trailing_diamond": "",
+      "leading_diamond": "",
+      "trailing_diamond": "",
       "foreground": "p:ink",
       "background": "p:meadow",
-      "properties": {
-        "fetch_status": true,
-        "branch_icon": " "
-      },
+      "properties": { "fetch_status": true, "branch_icon": " " },
       "template": " {{ .HEAD }} "
     }
   ]
