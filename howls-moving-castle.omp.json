@@ -125,7 +125,7 @@
           "foreground_templates": [
             "{{ if gt .Code 0 }}p:ember{{ end }}"
           ],
-          "template": "❥ "
+          "template": " "
         },
         {
           "type": "status",
@@ -145,12 +145,12 @@
   "transient_prompt": {
     "foreground": "p:calcifer",
     "background": "transparent",
-    "template": "❥ ❯ "
+    "template": " ❯ "
   },
   "secondary_prompt": {
     "foreground": "p:sophie_silver",
     "background": "transparent",
-    "template": "❥❥ ❯ "
+    "template": " ❯ "
   },
   "tooltips": [
     {
