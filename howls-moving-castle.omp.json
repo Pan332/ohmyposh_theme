@@ -42,7 +42,7 @@
             "max_depth": 3,
             "folder_icon": "",
             "home_icon": "",
-            "folder_separator_icon": "   "
+            "folder_separator_icon": "<p:castle_teal,transparent> </>"
           },
           "template": "  {{ .Path }} "
         },
